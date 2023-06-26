@@ -8,5 +8,16 @@ for (j = 0; j < columnLength; j++) {
     const grid = document.createElement("div");
     grid.classList.add("grid");
     container.appendChild(grid);
+    // grid.addEventListener('mouseover', colorChange);
   }
 }
+
+//give each grid div an id
+let id = 1;
+document.querySelectorAll('.grid').forEach(e => {
+    console.log(e)
+    e.id = i - 16;
+    i++
+})
+
+console.log(document.querySelectorAll('.grid'))
