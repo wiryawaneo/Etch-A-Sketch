@@ -8,6 +8,7 @@ for (j = 0; j < columnLength; j++) {
   for (i = 0; i < rowLength; i++) {
     const grid = document.createElement("div");
     grid.classList.add("grid");
+    grid.style = "flex-basis:" + (100 / rowLength) + "%;";
     container.appendChild(grid);
     grid.addEventListener("mouseenter", colorChange);
     // grid.addEventListener("mouseleave", removeChange);
@@ -46,6 +47,7 @@ function gridTransform() {
       const grid = document.createElement("div");
       grid.classList.add("grid");
       container.appendChild(grid);
+      grid.style = "flex-basis:" + (100 / slider.value) + "%;";
       grid.addEventListener("mouseenter", colorChange);
       // grid.addEventListener("mouseleave", removeChange);
     }
