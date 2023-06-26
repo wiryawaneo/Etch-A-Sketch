@@ -1,16 +1,15 @@
 #container {
-  border: 1px solid red;
+  border: 5px solid black;
   display: flex;
   flex-wrap: wrap;
-  gap:1px;
-  width:600px;
-  height:600px;
+  width: 500px;
+  height: 500px;
 }
 
 .grid {
-  background-color: black;
+  /* background-color: black; */
 }
 
 .active {
-    background-color:aqua;
+  background-color: aqua;
 }
