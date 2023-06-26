@@ -34,10 +34,20 @@ function removeChange(e) {
 const slider = document.querySelector("#myRange");
 const sliderBox = document.querySelector(".sliderValue");
 slider.value = rowLength;
-sliderBox.innerHTML = slider.value + ' x ' + slider.value;
+sliderBox.innerHTML = slider.value + " x " + slider.value;
 console.log(slider.value);
 
 function gridTransform() {
   console.log(slider.value);
-  sliderBox.innerHTML = slider.value + ' x ' + slider.value;
+  sliderBox.innerHTML = slider.value + " x " + slider.value;
+  container.innerHTML = "";
+  for (j = 0; j < slider.value; j++) {
+    for (i = 0; i < slider.value; i++) {
+      const grid = document.createElement("div");
+      grid.classList.add("grid");
+      container.appendChild(grid);
+      grid.addEventListener("mouseenter", colorChange);
+      // grid.addEventListener("mouseleave", removeChange);
+    }
+  }
 }
