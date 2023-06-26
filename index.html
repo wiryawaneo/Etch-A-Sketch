@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Etch-A-Sketch!</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="slidecontainer">
+        <p class="sliderValue"></p>
+      <input
+        type="range"
+        min="1"
+        max="100"
+        class="slider"
+        id="myRange"
+        onChange="gridTransform()"
+      />
+    </div>
     <div id="container"></div>
-</body>
-<script src="script.js"></script>
+  </body>
+  <script src="script.js"></script>
 </html>
