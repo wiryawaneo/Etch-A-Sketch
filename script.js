@@ -8,20 +8,22 @@ for (j = 0; j < columnLength; j++) {
     const grid = document.createElement("div");
     grid.classList.add("grid");
     container.appendChild(grid);
-    grid.addEventListener("mouseover", colorChange);
+    grid.addEventListener("mouseenter", colorChange);
+    // grid.addEventListener("mouseleave", removeChange);
   }
 }
 
 //give each grid div an id
 let id = 1;
 const box = document.querySelectorAll(".grid").forEach((e) => {
-  //   console.log(e);
   e.id = i - 16;
   i++;
 });
 
 function colorChange(e) {
-  //give each grid div an id
-  //   const box = document.querySelector(".grid");
-  console.log(e.target);
+  e.target.classList.add("active");
+}
+
+function removeChange(e) {
+  e.target.classList.remove("active");
 }
