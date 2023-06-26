@@ -1,0 +1,14 @@
+#container {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1px;
+  width:600px;
+  height:600px;
+}
+
+.grid {
+  background-color: black;
+  flex: 1 0 6%;
+  
+}
