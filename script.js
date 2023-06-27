@@ -1,4 +1,6 @@
 const container = document.getElementById("container");
+//get color input
+const currentColor = document.getElementById("colorpicker");
 
 //GRID CODE
 //create a row of 16 boxes
@@ -8,33 +10,17 @@ for (j = 0; j < columnLength; j++) {
   for (i = 0; i < rowLength; i++) {
     const grid = document.createElement("div");
     grid.classList.add("grid");
-    grid.style = "flex-basis:" + 100 / rowLength + "%;";
+    grid.style = "flex-basis:" + 100 / rowLength + "%; ";
     container.appendChild(grid);
     grid.addEventListener("mouseenter", colorChange);
-    // grid.addEventListener("mouseleave", removeChange);
   }
 }
 
-//MIGHT NOT NEED THIS ID LOL
-// //give each grid div an id
-// let id = 1;
-// const box = document.querySelectorAll(".grid").forEach((e) => {
-//   e.id = i - 16;
-//   i++;
-// });
-
 function colorChange(e) {
-  e.target.classList.add("active");
-  //   e.target.style = "background-color:black;"
-  // console.log(e.target)
-}
-
-function removeChange(e) {
-  e.target.classList.remove("active");
+  e.target.style.background = currentColor.value;
 }
 
 //GRID SLIDER
-//ADD ON INPUT TO SLIDER CHANGE
 const slider = document.querySelector("#myRange");
 const sliderBox = document.querySelector(".sliderValue");
 slider.value = rowLength;
@@ -52,20 +38,9 @@ function gridTransform() {
       container.appendChild(grid);
       grid.style = "flex-basis:" + 100 / slider.value + "%;";
       grid.addEventListener("mouseenter", colorChange);
-      // grid.addEventListener("mouseleave", removeChange);
     }
   }
 }
 
-//get color input
-const currentColor = document.getElementById("colorpicker");
-
-currentColor.addEventListener("input", changeColor);
-
-function changeColor() {
-  console.log("current color is " + currentColor.value);
-  const coloredBox = document.querySelectorAll(".active");
-  for (i = 0; i < coloredBox.length; i++) {
-    coloredBox[i].style.backgroundColor = currentColor.value;
-  }
-}
+//reset canvas
+function reset() {}
