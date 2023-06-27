@@ -43,4 +43,9 @@ function gridTransform() {
 }
 
 //reset canvas
-function reset() {}
+function reset() {
+  const coloredBox = document.querySelectorAll(".grid");
+  for (i = 0; i < coloredBox.length; i++) {
+    coloredBox[i].style.backgroundColor = "";
+  }
+}
