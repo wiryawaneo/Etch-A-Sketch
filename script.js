@@ -1,6 +1,7 @@
 const container = document.getElementById("container");
 //get color input
 const currentColor = document.getElementById("colorpicker");
+let currentColorVal = currentColor.value;
 
 //GRID CODE
 //create a row of 16 boxes
@@ -17,7 +18,23 @@ for (j = 0; j < columnLength; j++) {
 }
 
 function colorChange(e) {
-  e.target.style.background = currentColor.value;
+  if (buttonClicked) {
+    e.target.style.background =
+      "#" + Math.floor(Math.random() * 16777215).toString(16);
+  } else {
+    e.target.style.background = currentColor.value;
+  }
+}
+
+//randomise canvas
+let buttonClicked = false;
+function random() {
+  if (!buttonClicked) {
+    buttonClicked = true;
+  } else {
+    buttonClicked = false;
+  }
+  return buttonClicked;
 }
 
 //GRID SLIDER
@@ -49,3 +66,5 @@ function reset() {
     coloredBox[i].style.backgroundColor = "";
   }
 }
+
+//maybe on document load i can run grid transform so i only have to write that function once

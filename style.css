@@ -1,9 +1,6 @@
 .changeOptions {
-    display:flex;
-}
-
-.changeOptions div {
-    /* border:1px solid red; */
+  display: flex;
+  gap: 2%;
 }
 
 #container {
@@ -13,10 +10,6 @@
   width: 500px;
   height: 500px;
 }
-
-/* .active {
-  background-color: black; 
-} */
 
 #myRange[type="range"] {
   -webkit-appearance: none;
