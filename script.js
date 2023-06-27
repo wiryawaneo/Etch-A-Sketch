@@ -8,7 +8,7 @@ for (j = 0; j < columnLength; j++) {
   for (i = 0; i < rowLength; i++) {
     const grid = document.createElement("div");
     grid.classList.add("grid");
-    grid.style = "flex-basis:" + (100 / rowLength) + "%;";
+    grid.style = "flex-basis:" + 100 / rowLength + "%;";
     container.appendChild(grid);
     grid.addEventListener("mouseenter", colorChange);
     // grid.addEventListener("mouseleave", removeChange);
@@ -32,6 +32,7 @@ function removeChange(e) {
 }
 
 //GRID SLIDER
+//ADD ON INPUT TO SLIDER CHANGE
 const slider = document.querySelector("#myRange");
 const sliderBox = document.querySelector(".sliderValue");
 slider.value = rowLength;
@@ -47,7 +48,7 @@ function gridTransform() {
       const grid = document.createElement("div");
       grid.classList.add("grid");
       container.appendChild(grid);
-      grid.style = "flex-basis:" + (100 / slider.value) + "%;";
+      grid.style = "flex-basis:" + 100 / slider.value + "%;";
       grid.addEventListener("mouseenter", colorChange);
       // grid.addEventListener("mouseleave", removeChange);
     }
