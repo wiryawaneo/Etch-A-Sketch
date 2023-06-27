@@ -7,18 +7,24 @@
     <title>Etch-A-Sketch!</title>
   </head>
   <body>
-    <div class="slidecontainer">
+    <div class="changeOptions">
+      <div class="slidecontainer">
         <p class="sliderValue"></p>
-      <input
-        type="range"
-        min="1"
-        max="100"
-        class="slider"
-        id="myRange"
-        oninput="gridValue()"
-        onChange="gridTransform()"
-      />
+        <input
+          type="range"
+          min="1"
+          max="100"
+          class="slider"
+          id="myRange"
+          oninput="gridValue()"
+          onChange="gridTransform()"
+        />
+      </div>
+      <div>
+        <input type="color" id="colorpicker" value="black" />
+      </div>
     </div>
+
     <div id="container"></div>
   </body>
   <script src="script.js"></script>

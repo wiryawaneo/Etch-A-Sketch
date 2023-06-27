@@ -25,6 +25,8 @@ for (j = 0; j < columnLength; j++) {
 
 function colorChange(e) {
   e.target.classList.add("active");
+  //   e.target.style = "background-color:black;"
+  // console.log(e.target)
 }
 
 function removeChange(e) {
@@ -52,5 +54,18 @@ function gridTransform() {
       grid.addEventListener("mouseenter", colorChange);
       // grid.addEventListener("mouseleave", removeChange);
     }
+  }
+}
+
+//get color input
+const currentColor = document.getElementById("colorpicker");
+
+currentColor.addEventListener("input", changeColor);
+
+function changeColor() {
+  console.log("current color is " + currentColor.value);
+  const coloredBox = document.querySelectorAll(".active");
+  for (i = 0; i < coloredBox.length; i++) {
+    coloredBox[i].style.backgroundColor = currentColor.value;
   }
 }
