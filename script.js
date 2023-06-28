@@ -11,7 +11,8 @@ for (j = 0; j < columnLength; j++) {
   for (i = 0; i < rowLength; i++) {
     const grid = document.createElement("div");
     grid.classList.add("grid");
-    grid.style = "flex-basis:" + 100 / rowLength + "%; ";
+    grid.style =
+      "flex-basis:" + 100 / rowLength + "%; box-sizing: border-box; border:0.1px solid rgba(0,0,0,0.08)";
     container.appendChild(grid);
     grid.addEventListener("mouseenter", colorChange);
   }
