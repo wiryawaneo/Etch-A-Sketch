@@ -140,12 +140,8 @@ footer {
     flex-direction: column-reverse;
     margin-bottom: 8vh;
   }
-  #container {
-    width: 400px;
-    height: 400px;
-  }
+
   footer {
     height: 6vh;
-    width:100vw;
   }
 }
