@@ -18,23 +18,37 @@ for (j = 0; j < columnLength; j++) {
 }
 
 function colorChange(e) {
-  if (buttonClicked) {
+  if (randomClicked) {
     e.target.style.background =
       "#" + Math.floor(Math.random() * 16777215).toString(16);
+  } else if (eraseClicked) {
+    e.target.style.background = "";
   } else {
     e.target.style.background = currentColor.value;
   }
 }
 
 //randomise canvas
-let buttonClicked = false;
+let randomClicked = false;
 function random() {
-  if (!buttonClicked) {
-    buttonClicked = true;
+  if (!randomClicked) {
+    randomClicked = true;
+    eraseClicked = false;
   } else {
-    buttonClicked = false;
+    randomClicked = false;
   }
-  return buttonClicked;
+  return randomClicked;
+}
+
+let eraseClicked = false;
+function erase() {
+  if (!eraseClicked) {
+    eraseClicked = true;
+    randomClicked = false;
+  } else {
+    eraseClicked = false;
+  }
+  return eraseClicked;
 }
 
 //GRID SLIDER
