@@ -18,6 +18,7 @@ for (j = 0; j < columnLength; j++) {
       "%; box-sizing: border-box; border:0.1px solid rgba(0,0,0,0.08)";
     container.appendChild(grid);
     grid.addEventListener("mouseenter", colorChange);
+    grid.addEventListener("touchmove", colorChange);
   }
 }
 
@@ -86,3 +87,4 @@ function reset() {
 }
 
 //maybe on document load i can run grid transform so i only have to write that function once
+//change button state once clicked (erase stays in a certain color/random)
