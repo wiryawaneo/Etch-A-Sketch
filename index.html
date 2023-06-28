@@ -7,34 +7,39 @@
     <title>Etch-A-Sketch!</title>
   </head>
   <body>
-    <div class="changeOptions">
-      <div class="slidecontainer">
-        <p class="sliderValue"></p>
-        <input
-          type="range"
-          min="1"
-          max="100"
-          class="slider"
-          id="myRange"
-          oninput="gridValue()"
-          onChange="gridTransform()"
-        />
-      </div>
-      <div>
-        <input type="color" id="colorpicker" value="#000000" />
-      </div>
-      <div>
-        <button onClick="random()">Random</button>
-      </div>
-      <div>
-        <button onClick="erase()">Eraser</button>
-      </div>
-      <div>
-        <button onClick="reset()">Reset</button>
-      </div>
+    <div id="header">
+        <h1>Etch-A-Sketch</h1>
     </div>
+    <div id="contents">
+      <div class="changeOptions">
+        <div>
+          <input type="color" id="colorpicker" value="#000000" />
+        </div>
+        <div>
+          <button onClick="random()">Random</button>
+        </div>
+        <div>
+          <button onClick="erase()">Eraser</button>
+        </div>
+        <div>
+          <button onClick="reset()">Reset</button>
+        </div>
+        <div class="slidecontainer">
+          <p class="sliderValue"></p>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            class="slider"
+            id="myRange"
+            oninput="gridValue()"
+            onChange="gridTransform()"
+          />
+        </div>
+      </div>
 
-    <div id="container"></div>
+      <div id="container"></div>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>

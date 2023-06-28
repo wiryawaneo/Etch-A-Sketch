@@ -1,6 +1,15 @@
+#contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:5em;
+}
+
 .changeOptions {
   display: flex;
-  gap: 2%;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
 }
 
 #container {
