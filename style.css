@@ -82,7 +82,7 @@ button:active {
 }
 
 #colorpicker:active {
-    transform:scale(0.85);
+  transform: scale(0.85);
 }
 
 #colorpicker::-webkit-color-swatch {
@@ -120,27 +120,31 @@ button:active {
 
 #myRange::-webkit-slider-thumb:active {
   background-color: rgb(43, 43, 43);
-    transform: scale(0.85);
+  transform: scale(0.85);
 }
 
 footer {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width:100%;
-    bottom:0;
-    height:8vh;
-    background-color: rgb(31, 31, 31);
-    color:rgb(227, 227, 227);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 8vh;
+  background-color: rgb(31, 31, 31);
+  color: rgb(227, 227, 227);
 }
 
-@media screen and (max-width:800px) {
-    #contents {
-        flex-direction: column-reverse;
-        margin-bottom:8vh;
-    }
-    footer {
-        height:6vh;
-    }
+@media screen and (max-width: 800px) {
+  #contents {
+    flex-direction: column-reverse;
+    margin-bottom: 8vh;
+  }
+  #container {
+    width: 400px;
+    height: 400px;
+  }
+  footer {
+    height: 6vh;
+  }
 }
