@@ -18,7 +18,7 @@ for (j = 0; j < columnLength; j++) {
       "%; box-sizing: border-box; border:0.1px solid rgba(0,0,0,0.08)";
     container.appendChild(grid);
     grid.addEventListener("mouseenter", colorChange);
-    grid.addEventListener("touchenter", colorChange);
+    grid.addEventListener("touchstart", colorChange);
   }
 }
 
